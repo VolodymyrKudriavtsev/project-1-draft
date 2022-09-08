@@ -118,6 +118,12 @@ img {
           justify-content: space-between;
   height: 100%;
 }
+@media screen and (min-width: 1440px) {
+  .header {
+    height: 130px;
+  }
+}
+
 .header-petal {
   position: absolute;
   top: 0;
@@ -125,6 +131,12 @@ img {
   height: 74px;
   -webkit-box-shadow: 20px 20px 80px rgba(0, 0, 0, 0.1);
           box-shadow: 20px 20px 80px rgba(0, 0, 0, 0.1);
+}
+@media screen and (min-width: 1440px) {
+  .header-petal {
+    width: 144px;
+    height: 144px;
+  }
 }
 .header-petal.left {
   left: 0;
@@ -138,6 +150,7 @@ img {
 @media screen and (min-width: 1440px) {
   .header-petal.left {
     left: 291px;
+    border-radius: 0px 72px 72px 0px;
   }
 }
 .header-petal.right {
@@ -152,6 +165,7 @@ img {
 @media screen and (min-width: 1440px) {
   .header-petal.right {
     right: 266px;
+    border-radius: 72px 0px 0px 72px;
   }
 }
 
@@ -173,21 +187,8 @@ img {
   }
 }
 
-.menu-open {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  width: 32px;
-  height: 32px;
-  border: 0;
-  margin-right: 48px;
-  background-color: transparent;
-  cursor: pointer;
-}
-@media screen and (min-width: 1440px) {
-  .menu-open {
+@media screen and (max-width: 1439.5px) {
+  .navigation {
     display: none;
   }
 }
@@ -235,15 +236,29 @@ img {
   }
 }
 
-@media screen and (min-width: 768px) {
+.menu-open {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 32px;
+  height: 32px;
+  border: 0;
+  margin-right: 48px;
+  background-color: transparent;
+  cursor: pointer;
+}
+@media screen and (min-width: 1440px) {
+  .menu-open {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1439.5px) {
   .lang {
     margin-left: auto;
     margin-right: 43px;
-  }
-}
-@media screen and (min-width: 1440px) {
-  .lang {
-    margin-right: 93px;
   }
 }
 
@@ -275,10 +290,6 @@ img {
   line-height: 1.28;
   letter-spacing: 0.01em;
   color: #bdbdbd;
-}
-
-.navigation {
-  display: none;
 }
 
 .navigation__list {
