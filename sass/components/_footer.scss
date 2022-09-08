@@ -1,0 +1,74 @@
+.footer {
+  background-color: var(--bgc-hero-footer);
+  padding: 60px 0;
+
+  .container {
+    @include df-center($jc: null, $ai: baseline);
+    flex-wrap: wrap;
+    text-align: center;
+
+    @include tablet {
+      @include df-center($jc: space-between, $ai: null);
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199.5px) {
+      padding-left: 76px;
+      padding-right: 89px;
+    }
+
+    @include desktop {
+      @include df-center($jc:flex-start, $ai: null);
+      text-align: left;
+    }
+  }
+
+  @include desktop {
+    min-width: 1600px;
+  }
+}
+
+.wrap-address {
+  width: 100%;
+
+  @media screen and (max-width: 1199.5px) {
+    margin-bottom: 60px;
+  }
+
+  @include tablet {
+    width: 232px;
+  }
+
+  @include desktop {
+    width: 231px;
+    margin-right: 70px;
+  }
+}
+
+.wrap-social {
+  width: 100%;
+
+  @media screen and (max-width: 767.5px) {
+    margin-bottom: 60px;
+  }
+
+  @include tablet {
+    width: 206px;
+  }
+
+  @include desktop {
+    margin-right: 93px;
+  }
+}
+
+.wrap-subscribe {
+  width: 100%;
+
+  @media screen and (min-width: 768px) and (max-width: 1199.5px) {
+    width: 450px;
+    @include margin-lr-auto;
+  }
+
+  @include desktop {
+    width: 570px;
+  }
+}

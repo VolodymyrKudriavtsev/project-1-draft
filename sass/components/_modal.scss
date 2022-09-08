@@ -1,0 +1,77 @@
+
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: calc(100% - 30px);
+  min-height: 609px;
+  padding: 40px;
+
+  background: var(--white-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  transition-property: transform, opacity;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+  transition-delay: var(--transition-duration);
+
+  .backdrop.is-hidden & {
+    transform: translate(-50%, -50%) scale(0.5) rotate(90deg);
+    opacity: 0;
+  }
+
+  @include mobile {
+    width: 450px;
+    height: 609px;
+  }
+
+  @include desktop {
+    width: 528px;
+    height: 581px;
+  }
+}
+
+.modal__close-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  @include df-center;
+  color: var(--black-color);
+  background-color: var(--white-color);
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition-property: color;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+
+  &:hover,
+  &:focus {
+    color: var(--acent-color);
+  }
+}
+
+.modal__icon {
+  fill: currentColor;
+}
+
+.modal__title {
+  margin-bottom: 12px;
+  color: var(--h-text-color);
+  @include fonts (700, 19px, 1.5, 0.03em, null, center);
+
+  @include mobile {
+    font-size: 20px;
+  }
+
+  @include desktop {
+    line-height: 1.15;
+  }
+}

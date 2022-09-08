@@ -1,0 +1,46 @@
+.button {
+  @include df-center;
+  width: 200px;
+  height: 50px;
+  // @include margin-lr-auto;
+
+  color: var(--white-color);
+  background-color: var(--acent-color);
+  font-family: inherit;
+  @include fonts(700, 16px, 1.88, 0.06em, null, null);
+
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  border: transparent;
+  transition: background-color var(--transition-duration) var(--transition-timing-function);
+  outline: transparent;
+
+  &:hover,
+  &:focus {
+    background-color: var(--btn-hoover);
+  }
+}
+
+.hero__btn {
+  @include margin-lr-auto;
+
+  @include desktop {
+    width: 216px;
+  }
+}
+
+.order-form__button {
+  @include margin-lr-auto;
+}
+
+.subscribe-form__button {
+  @media screen and (max-width: 1199.5px) {
+    @include margin-lr-auto;
+  }
+}
+
+.button__icon {
+  fill: currentColor;
+  margin-left: 10px;
+}

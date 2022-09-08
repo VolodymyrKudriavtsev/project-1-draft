@@ -1,0 +1,86 @@
+.contacts {
+  @include df-center($jc: null);
+}
+
+.header__contacts {
+  margin-left: auto;
+  display: none;
+
+  @include tablet {
+    display: block;
+  }
+
+  @include desktop {
+    display: flex;
+    gap: 50px;
+  }
+}
+
+.contacts__item:nth-child(1) {
+  @media screen and (max-width: 1199.5px) {
+    margin-bottom: 10px;
+  }
+}
+
+.contacts__mail {
+  @include tablet {
+    padding-top: 21px;
+  }
+}
+
+.contacts__tel {
+  @include tablet {
+    padding-bottom: 21px;
+  }
+}
+
+.contacts__mail,
+.contacts__tel {
+  @include df-center($jc: null);
+  @include fonts(500, 12px, 1.17, 0.02em, null, null);
+  text-decoration: none;
+  transition: color var(--transition-duration) var(--transition-timing-function);
+  outline: transparent;
+  color: var(--p-text-color);
+
+  &:hover,
+  &:focus {
+    color: var(--acent-color);
+  }
+
+  @include desktop {
+    @include fonts(null, 14px, 1.14, null, null, null);
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+.contacts__tel-icon,
+.contacts__mail-icon {
+  fill: currentColor;
+  margin-right: 8px;
+
+  @include desktop {
+    margin-right: 10px;
+  }
+}
+
+.contacts__mail-icon {
+  width: 14px;
+  height: 10px;
+
+  @include desktop {
+    width: 16px;
+    height: 12px;
+  }
+}
+
+.contacts__tel-icon {
+  width: 10px;
+  height: 14px;
+
+  @include desktop {
+    width: 10px;
+    height: 16px;
+  }
+}

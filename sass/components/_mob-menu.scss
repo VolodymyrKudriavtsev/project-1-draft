@@ -1,0 +1,141 @@
+.menu-open,
+.menu-close {
+  @include df-center;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  transition-property: color;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+
+  &:hover,
+  &:focus {
+    color: var(--acent-color);
+  }
+}
+
+.menu-open {
+  margin-left: auto;
+  @include tablet {
+    display: none;
+  }
+}
+
+.menu-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
+.menu-open__icon,
+.menu-close__icon {
+  fill: currentColor;
+}
+
+.mob-menu {
+  position: fixed;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 48px 40px;
+  @include fonts(500, 18px, 1.18, 0.02em, null, null);
+  background-color: var(--white-color);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
+    0px 1px 3px rgba(0, 0, 0, 0.16);
+  overflow: auto;
+
+  transform: translate(100%);
+  transition-property: transform;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+
+  a {
+    text-decoration: none;
+  }
+
+  &.is-open {
+    transform: translateX(0);
+    }
+  }
+  
+.menu-nav__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.menu-nav__link {
+  color: var(--h-text-color);
+  font-size: 40px;
+  transition: color var(--transition-duration) var(--transition-timing-function);
+  outline: transparent;
+
+  &:hover,
+  &:focus {
+    color: var(--acent-color);
+  }
+  &.current {
+    color: var(--acent-color);
+  }
+}
+
+.menu-contacts {
+  margin-top: auto;
+  margin-bottom: 64px;
+}
+
+.menu-contacts__item:nth-child(1) {
+  margin-bottom: 32px;
+}
+
+.menu-contacts__tel {
+  color: var(--acent-color);
+  font-size: 27px;
+
+  @include mobile {
+    font-size: 34px;
+  }
+}
+
+.menu-contacts__mail {
+  color: var(--p-text-color);
+  @include fonts(null, 24px, 1.17, null, null, null);
+}
+
+.menu-social {
+  display: flex;
+}
+
+.menu-social__item {
+  display: inline-block;
+
+  &:not(:last-child) {
+    padding-right: 2px;
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+
+    @include mobile {
+      padding-right: 10px;
+    }
+  }
+
+  &:not(:first-child) {
+    padding-left: 2px;
+
+    @include mobile {
+    padding-left: 10px;
+    }
+  }
+}
+
+.menu-social__link {
+  color: var(--acent-color);
+  @include fonts(null, 14px, 1.22, null, null, null);
+
+  @include mobile {
+    font-size: 18px;
+  }
+}

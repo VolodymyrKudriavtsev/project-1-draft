@@ -1,0 +1,30 @@
+.logo {
+  color: var(--black-color);
+  font-family: Raleway, sans-serif;
+  @include fonts(700, 24px, 1.17, 0.03em, null, null);
+  text-decoration: none;
+
+  @include desktop {
+    @include fonts(null, 26px, 1.19, null, null, null);
+  }
+}
+
+.header__logo {
+  @include tablet {
+    margin-right: 88px;
+  }
+
+  @include desktop {
+    margin-right: 93px;
+  }
+}
+
+.footer__logo {
+  display: block;
+  color: var(--white-color);
+  margin-bottom: 20px;
+}
+
+.logo__blue {
+  color: var(--acent-color);
+}

@@ -1,0 +1,29 @@
+.address__link,
+.address__mail {
+  margin-bottom: 9px;
+}
+
+.address__link,
+.address__mail,
+.address__tel {
+  display: inline-block;
+  font-style: normal;
+  @include fonts (null, 14px, 1.7, 0.03em, null, null);
+  text-decoration: none;
+  transition: color var(--transition-duration) var(--transition-timing-function);
+  outline: transparent;
+
+  &:hover, &:focus {
+    color: var(--acent-color); 
+  }
+}
+
+.address__link {
+  color: var(--white-color);
+}
+
+.address__mail,
+.address__tel {
+  color: var(--foot-contact-color);
+}
+

@@ -1,0 +1,18 @@
+.header {
+  height: 60px;
+  background-color: var(--white-color);
+  border-bottom: 1px solid #ececec;
+
+  .container {
+    height: 100%;
+    @include df-center($jc:flex-start);
+  }
+
+  @include tablet {
+    height: 80px;
+  }
+
+  @include desktop {
+    min-width: 1600px;
+  }
+}

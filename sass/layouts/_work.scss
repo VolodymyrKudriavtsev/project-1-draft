@@ -1,0 +1,38 @@
+.work {
+  display: none;
+
+  @include desktop {
+    display: block;
+    padding-bottom: 94px;
+    min-width: 1600px;
+  }
+}
+
+.work__list {
+  display: flex;
+  gap: 30px;
+}
+
+.work__link {
+  position: relative;
+  text-decoration: none;
+}
+
+.work__item {
+  width: calc((100% - 60px) / 3);
+}
+
+.work__direction {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  margin-bottom: 0;
+
+  background-color: rgba(47, 48, 58, 0.8);
+
+  color: var(--white-color);
+  text-align: center;
+}

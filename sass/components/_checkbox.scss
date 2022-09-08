@@ -1,0 +1,38 @@
+.checkbox {
+  @include df-center($jc: null);
+  @include fonts(null, 12px, 1.17, 0.03em, null, center);
+
+  @include desktop {
+    margin-left: 12px;
+    @include fonts(null, 14px, 1.71, null, null, null);
+  }
+}
+
+.order-form__checkbox {
+  margin-bottom: 30px;
+  margin-bottom: 30px;
+}
+
+.checkbox__icon {
+  @include df-center($d: inline-flex);
+  width: 16px;
+  height: 15px;
+  margin-right: 7px;
+  border: 2px solid;
+  border-color: #212121;
+  border-radius: 2px;
+
+  .checkbox__input:focus + & {
+    border-color: var(--acent-color);
+  }
+
+  .checkbox__input:checked + & {
+    background-color: var(--acent-color);
+    border: none;
+  }
+}
+
+.checkbox__link {
+  color: var(--acent-color);
+  margin-left: 5px;
+}

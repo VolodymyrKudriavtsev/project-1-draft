@@ -1,0 +1,93 @@
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.cards__item {
+  background-color: var(--white-color);
+  width: 100%;
+
+@include tablet {
+  width: calc((100% - 30px) / 2);
+  }
+
+@include desktop {
+  width: calc((100% - 60px) / 3);
+}
+}
+
+.cards__link {
+  display: block;
+  text-decoration: none;
+  transition: box-shadow var(--transition-duration) var(--transition-timing-function);
+  outline: transparent;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}
+
+.cards__wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.cards__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 77px;
+  padding-bottom: 77px;
+  overflow: auto;
+
+  @include tablet {
+    padding-top: 49px;
+  }
+
+  @include desktop {
+    padding-top: 63px;
+    padding-bottom: 63px;
+  }
+  
+  color: var(--white-color);
+  @include fonts (null, 18px, 1.56, 0.03em, null, null);
+
+  background-color: var(--card-overlay-color);
+
+  transform: translateY(100%);
+  transition-property: transform;
+  transition-duration: 250ms;
+
+  .cards__link:hover &, .cards__link:focus & {
+    transform: translateY(0);
+  }  
+}
+
+.cards__description {
+  padding: 20px 24px;
+  border: 1px solid #eeeeee;
+
+  .cards .cards__item:nth-child(1) & {
+    @media screen and (min-width: 768px) and (max-width: 1199.5px) {
+      padding-bottom: 56px;
+    }    
+  }
+}
+
+.cards__title {
+  color: var(--h-text-color);
+  @include fonts (null, 18px, 2, 0.06em, null, null);
+  margin-bottom: 4px;
+}
+
+.cards__text {
+  color: var(--p-text-color);
+  @include fonts (null, 16px, 1.88, 0.03em, null, null);
+}

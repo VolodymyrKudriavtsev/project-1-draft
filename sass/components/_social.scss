@@ -1,0 +1,33 @@
+.social {
+  @include df-center($ai:null);
+  gap: 10px;
+}
+
+.social__link {
+  @include df-center;
+  color: var(--icon-main-fill);
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+  transition: color var(--transition-duration) var(--transition-timing-function),
+    background-color var(--transition-duration) var(--transition-timing-function);
+  outline: transparent;
+
+  &:hover,
+  &:focus {
+    background-color: var(--acent-color);
+    color: var(--white-color);
+  }
+
+}
+
+.social__link--bottom {
+  color: var(--white-color);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.social__icon {
+  fill: currentColor;
+}
+
+

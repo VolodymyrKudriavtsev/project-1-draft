@@ -1,0 +1,61 @@
+// первинний
+.primary-title {
+  max-width: 360px;
+  color: var(--white-color);
+  @include fonts(900, 20px, 1.62, 0.06em, uppercase, null);
+}
+
+.hero__title {
+  margin: 0 auto 30px;
+
+  @include mobile {
+    font-size: 26px;
+  }
+
+  @include desktop {
+    max-width: 696px;
+    @include fonts(null, 44px, 1.36, null, null, null);
+  }
+}
+
+// вторинний
+.secondary-title {
+  color: var(--h-text-color);
+  @include fonts(null, 28px, 1.18, 0.03em, null, center);
+}
+
+.work__title,
+.team__title,
+.clients__title {
+  margin-bottom: 30px;
+
+  @include desktop {
+    margin-bottom: 50px;
+    @include fonts(null, 36px, 1.17, null, null, null);
+  }
+}
+
+// третинний
+.tetriary-title {
+  color: var(--h-text-color);
+  @include fonts(null, 14px, 1.14, 0.03em, uppercase, null);
+}
+
+.benefits__title {
+  margin-bottom: 10px;
+
+  @media screen and (max-width: 767.5px) {
+    text-align: center;
+  }
+}
+
+.team__name {
+  @include fonts(500, 16px, 1.19, 0.03em, none, center);
+  margin-bottom: 10px;
+}
+
+.footer__title {
+  // display: inline-block;
+  margin-bottom: 20px;
+  color: var(--white-color);
+}
