@@ -29,12 +29,15 @@
 }
 
 .header {
-  // height: 74px;
+  height: 74px;
   background-color: #fff;
 
   .container {
     position: relative;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
   }
 
   @include tablet {
@@ -56,25 +59,85 @@
   &.left {
     left: 0;
     border-radius: 0px 35px 35px 0px;
+
+    @include tablet {
+      left: 232px;
+    }
+
+    @include desktop {
+      left: 291px;
+    }
   }
 
   &.right {
     right: 0;
     border-radius: 35px 0px 0px 35px;
+
+    @include tablet {
+      right: 216px;
+    }
+
+    @include desktop {
+      right: 266px;
+    }
+  }
+}
+
+.header-logo {
+  width: 101px;
+  height: 25px;
+  background-color: aqua;
+
+  @include tablet {
+    width: 125px;
+    height: 31px;
+  }
+
+  @include desktop {
+    width: 192px;
+    height: 48px;
+  }
+}
+
+.menu-open {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 32px;
+  height: 32px;
+  border: 0;
+  margin-right: 48px;
+  background-color: transparent;
+  cursor: pointer;
+
+  @include desktop {
+    display: none;
+  }
+}
+
+.mobile-tel {
+  position: absolute;
+  top: 24px;
+  right: 75px;
+  width: 24px;
+  height: 24px;
+
+  @include tablet {
+    display: none;
   }
 }
 
 .tel-list {
   @media screen and (max-width: 767.5px) {
     position: absolute;
-  top: 74px;
-  right: 0;
-  border-radius: 2px;
-  box-shadow: 20px 20px 80px rgba(0, 0, 0, 0.1);
-  padding: 16px 7px;
-  // transform: scaleX(0);  
+    top: 74px;
+    right: 0;
+    border-radius: 2px;
+    box-shadow: 20px 20px 80px rgba(0, 0, 0, 0.1);
+    padding: 16px 7px;
+    // transform: scaleX(0);
   }
-
 }
 
 .tel-item:first-child {
@@ -91,16 +154,40 @@
 
 .tel-list-icon {
   @media screen and (max-width: 767.5px) {
-  display: none;
-}
+    display: none;
+  }
 }
 
-.lang-item:not(:first-child) {
-  transform: scaleX(0);
+.lang {
+  @include tablet {
+    margin-left: auto;
+    margin-right: 43px;
+  }
+
+  @include desktop {
+    margin-right: 93px;
+  }
+}
+
+.lang-item:first-child {
+  transform: translateY(100%);
+  opacity: 0;
 
   .lang:hover &,
   .lang:focus-within & {
-    transform: scaleX(1);
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+
+.lang-item:last-child {
+  transform: translateY(-100%);
+  opacity: 0;
+
+  .lang:hover &,
+  .lang:focus-within & {
+    transform: translate(0);
+    opacity: 1;
   }
 }
 

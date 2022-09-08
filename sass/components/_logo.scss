@@ -1,19 +1,4 @@
-.logo {
-  display: block;
-  width: 101px;
-  height: 25px;
-  background-color: aqua;
 
-  @include tablet {
-    width: 125px;
-  height: 31px;
-  }
-
-  @include desktop {
-    width: 192px;
-  height: 48px;
-  }
-}
 
 // .header__logo {
 //   @include tablet {
