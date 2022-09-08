@@ -1,21 +1,5 @@
-.container {
-  @include margin-lr-auto;
-  width: 100%;
-  padding-left: 15px;
-  padding-right: 15px;
 
-  @include mobile {
-    width: 480px;
-  }
 
-  @include tablet {
-    width: 768px;
-  }
-
-  @include desktop {
-    width: 1200px;
-  }
-}
 
 .section {
   padding-top: 60px;
@@ -41,6 +25,3 @@
   overflow: hidden;
 }
 
-.list {
-  list-style: none;
-}
