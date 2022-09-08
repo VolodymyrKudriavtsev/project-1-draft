@@ -416,6 +416,11 @@ img {
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
+@media screen and (min-width: 1200px) {
+  .mob-menu {
+    display: none;
+  }
+}
 
 .menu-nav__item:not(:last-child) {
   margin-bottom: 32px;
