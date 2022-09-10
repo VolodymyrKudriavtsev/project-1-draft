@@ -448,8 +448,20 @@ img {
 
 .menu-close {
   position: absolute;
-  top: 10px;
-  right: 15px;
+  top: 25px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 24px;
+  height: 24px;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+@media screen and (min-width: 1440px) {
+  .menu-close {
+    display: none;
+  }
 }
 
 .menu-open__icon,
